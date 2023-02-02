@@ -1,0 +1,55 @@
+@import "./variables";
+
+.contact {
+  width: 100vw;
+  height: 100vh;
+  background-color: $grey;
+
+  &-wrap {
+    max-width: 980px;
+  }
+
+  &-tit {
+    font-family: $sansSerif;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  &-contents {
+    display: flex;
+    justify-content: space-between;
+
+    &-texts {
+      span {
+        font-family: $cursive;
+        font-size: 36px;
+        color: $yellow;
+      }
+      p {
+        font-family: $sansSerif;
+        color: #fff;
+      }
+    }
+
+    &-form {
+      form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          width: 300px;
+          height: 50px;
+          border-radius: 10px;
+          background-color: rgb(255,255,255,0.25);
+        }
+
+        button {
+          width: 128px;
+          height: 33px;
+          background-color: $yellow;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

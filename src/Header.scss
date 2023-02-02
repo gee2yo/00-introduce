@@ -1,0 +1,21 @@
+.header {
+  width: 100vw;
+  height: 69px;
+  position: fixed;
+
+  &-wrap {
+    position: absolute;
+    right: 65px;
+  }
+
+  &-lists {
+    display: flex;
+    margin-top: 33px;
+
+    &-item {
+      margin-right: 54px;
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+}
