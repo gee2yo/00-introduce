@@ -1,0 +1,76 @@
+@import "../../styles/_variables.scss";
+
+.work {
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .work-contents {
+
+    &-menu {
+      display: flex;
+      justify-content: center;
+      margin-top: 14px;
+
+      ul {
+        display: flex;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-family: $sansSerif;
+          font-size: 16px;
+          line-height: 1.5;
+          color: #fff;
+
+        }
+        li:not(:last-of-type) {
+          margin-right: 47px;
+        }
+      }
+    }
+
+    &-lists {
+      margin-top: 50px;
+
+      ul {
+        display: flex;
+        gap: 39px;
+
+        li {
+          width: 439px;
+          height: 329px;
+          background-color: #C4C4C4;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    &-slide {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+
+      &-circles {
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        opacity: 25%;
+        border-radius: 50%;
+
+        &:not(:last-of-type) {
+          margin-right: 15px;
+        }
+      }
+
+      .circle01 {
+        background-color: $yellow;
+        opacity: 100%;
+      }
+    }
+  }
+}

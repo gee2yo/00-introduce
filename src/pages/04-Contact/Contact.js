@@ -1,16 +1,20 @@
 import React from "react";
-import InputWithLabel from "./atom/InputWithLabel";
-import Line from "./atom/Line";
+import InputWithLabel from "../../components/molecule/InputWithLabel";
+// import Line from "./atom/Line";
+import Title from "../../components/molecule/Title";
 import "./Contact.scss";
 
 export default function Contact() {
   return (
     <div className="contact">
       <div className="contact-wrap">
-        <div className="contact-tit">
-          <h1>CONTACT</h1>
-          <Line />
-        </div>
+        <Title
+          title="CONTACT"
+          align="center"
+          width="100px"
+          height="3px"
+          bgColor="#fff"
+        />
         <div className="contact-contents">
           <div className="contact-contents-texts">
             <span>{`LET'S TALK`}</span>

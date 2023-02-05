@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Line from "../atom/Line";
 import "./Header.scss";
 
 export default function Header() {
@@ -9,6 +10,7 @@ export default function Header() {
         <ul className="header-lists">
           <li className="header-lists-item">
             <Link to="/">HOME</Link>
+            <Line width="46" bgColor="#FFB800" />
           </li>
           <li className="header-lists-item">
             <Link to="/about">ABOUT</Link>

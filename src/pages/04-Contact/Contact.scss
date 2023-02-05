@@ -1,4 +1,4 @@
-@import "./variables";
+@import "../../styles/_variables.scss";
 
 .contact {
   width: 100vw;
@@ -9,29 +9,10 @@
   align-content: center;
   flex-wrap: wrap;
 
-  &-wrap {
-  }
-
-  &-tit {
-    display: flex;
-    margin-bottom: 44px;
-
-    h1 {
-      font-family: $sansSerif;
-      font-size: 24px;
-      color: #fff;
-      display: inline-block;
-      margin-right: 29px;
-    }
-
-    .line {
-      
-    }
-  }
-
-  &-contents {
+  .contact-contents {
     display: flex;
     justify-content: space-between;
+    margin-top: 44px;
 
     &-texts {
       margin-right: 122px;

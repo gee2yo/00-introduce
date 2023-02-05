@@ -30,4 +30,8 @@ InputWithLabel.propTypes = {
 const Input = styled.input`
   width: ${(props) => props.width}px;
   height: ${(props) => props.hegiht}px;
+
+  &:focus {
+    outline-color: #ffb800;
+  }
 `;

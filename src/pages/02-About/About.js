@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "../../components/molecule/Title";
 import "./About.scss";
 
 export default function About() {
@@ -6,18 +7,21 @@ export default function About() {
     <div className="about">
       <div className="about-contents">
         <div className="about-contents-photo">
-          <img src="" alt="" />
           <div className="about-contents-photo-back" />
         </div>
         <div className="about-contents-texts">
           <div className="about-contents-texts-about">
-            <h1>ABOUT</h1>
+            <Title title="ABOUT" align="left" />
             <span>CHOI JIEE</span>
-            <p>DESCRIPTION</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
+              quisque leo dictum quis turpis. Felis eget porta sem leo ornare
+              nunc lacus.{" "}
+            </p>
           </div>
           <div className="about-contents-texts-skills">
-            <h2 className="about-contents-texts-skills-tit">SKILLS</h2>
-            <ul className="about-contents-texts-skills-list">
+            <Title title="SKILLS" align="left" />
+            <ul className="about-contents-texts-skills-lists">
               <li>HTML</li>
               <li>JavaScript</li>
               <li>React JS</li>
