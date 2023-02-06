@@ -26,7 +26,11 @@ export default function Contact() {
             </p>
           </div>
           <div className="contact-contents-form">
-            <form action="">
+            <form
+              className="gform"
+              method="POST"
+              action="https://script.google.com/macros/s/AKfycbyU7NmPoihmmZFeWxlK4AnXvdQvH70jRP7qZeV_HQ8jFIXbtaLgrU4neJoSwflaMqLJZg/exec"
+            >
               <InputWithLabel
                 label="Name"
                 inputId="name"
@@ -50,15 +54,12 @@ export default function Contact() {
                 height="104"
                 placeholder="Write your message"
               />
-              {/* <InputWithLabel
-                label="Message"
-                inputId="message"
-                name="message"
-                placeholder="Write your message here"
-                width="300"
-                height="104"
-              /> */}
               <button type="submit">Send Message</button>
+              <div className="thankyou">
+                <h2>
+                  <em>Thnaks</em>for contacting me! I will get back to you soon!
+                </h2>
+              </div>
             </form>
           </div>
         </div>

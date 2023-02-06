@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./PreLoader.scss";
-import styled, { keyframes, css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export default function PreLoader() {
+  // 마운트 여부를 state로 관리
+  const [isMount, setIsMount] = useState(false);
+  // useEffect()로 state를 변경
+  useEffect(() => {
+    setTimeout(() => {
+      setIsMount(true);
+    }, 300);
+    return () => setIsMount(false);
+  }, []);
+
   return (
-    <StyledPreLoader>
+    <StyledPreLoader isMount={isMount}>
       <div className="blackWall" />
       <div className="preLoader-point" />
     </StyledPreLoader>
@@ -26,13 +36,13 @@ const StyledPreLoader = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: red;
+  background-color: #111;
   z-index: 111111;
   transform-origin: bottom;
-  ${(props) =>
+  animation: ${(props) =>
     props.isMount &&
     css`
-      animation: ${preLoaderSlide} 0.5s ease-in-out 0s 1 reverse both;
+      ${preLoaderSlide} 0.5s ease-in-out 0s 1 reverse both;
     `};
   // 1(꽉 찬 상태) -> 0(아래로 사라지게) = 없는 상태로 유지
 
@@ -50,7 +60,7 @@ const StyledPreLoader = styled.div`
 
   .blackWall {
     height: 100%;
-    background-color: blue;
+    background-color: #222;
     transform-origin: top;
     animation: ${preLoaderSlide} 0.5s ease-in-out 0s 1 normal both;
     // 0(없는 상태) -> 1(아래로 꽉 차게) = 꽉 찬 상태로 유지

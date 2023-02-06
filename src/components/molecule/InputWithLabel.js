@@ -21,6 +21,7 @@ export default function InputWithLabel({
         width={width}
         height={height}
         {...rest}
+        required
       />
     </div>
   );
@@ -29,9 +30,15 @@ export default function InputWithLabel({
 const StyledInput = styled.input`
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
+  font-family: ${(props) => props.theme.sansSerif};
+  font-size: 16px;
 
   &:focus {
     outline: 2px solid ${(props) => props.theme.yellow};
+  }
+  &::placeholder {
+    font-family: ${(props) => props.theme.sansSerif};
+    font-size: 16px;
   }
 `;
 

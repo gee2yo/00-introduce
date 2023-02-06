@@ -15,13 +15,22 @@
   &-sns {
     width: 253px;
     height: 25px;
-    background-color: red;
+    display: flex;
+    gap: 32px; 
+
+    div {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #414141;
+    }
   }
 
   &-scroll {
     display: flex;
     align-items: center;
     gap: 25px;
+    margin-right: 25px;
 
     span {
       font-family: $sansSerif;

@@ -10,7 +10,13 @@ export default function Sidebar() {
           <span>SCROLL DOWN</span>
           <Line height="1px" />
         </div>
-        <div className="sidebar-sns" />
+        <div className="sidebar-sns">
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
       </div>
     </div>
   );
