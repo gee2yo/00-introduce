@@ -15,10 +15,25 @@ export default function InputWithLabel({
   return (
     <div className="inputWithLabel">
       <label htmlFor={inputId}>{label}</label>
-      <Input type="text" id={inputId} {...rest} />
+      <StyledInput
+        type="text"
+        id={inputId}
+        width={width}
+        height={height}
+        {...rest}
+      />
     </div>
   );
 }
+
+const StyledInput = styled.input`
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
+
+  &:focus {
+    outline: 2px solid ${(props) => props.theme.yellow};
+  }
+`;
 
 InputWithLabel.propTypes = {
   inputId: PropTypes.string.isRequired,
@@ -26,12 +41,3 @@ InputWithLabel.propTypes = {
   width: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
 };
-
-const Input = styled.input`
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.hegiht}px;
-
-  &:focus {
-    outline-color: #ffb800;
-  }
-`;

@@ -37,23 +37,23 @@
         display: flex;
         flex-direction: column;
 
-        .inputWithLabel {
+        .inputWithLabel,  .textAreaWithLabel {
           margin-bottom: 36px;
         }
+      }
 
-        button {
-          border: 0;
-          outline: 0;
-          // all: unset (기본 스타일 초기화, 정렬까지 초기화시켜버려서 안 함)
-          width: 128px;
-          height: 33px;
-          background-color: $yellow;
-          border-radius: 10px;
-          position: relative;
-          left: calc(100% - 128px);
-          font-family: $sansSerif;
-          font-size: 14px;
-        }
+      button {
+        border: 0;
+        outline: 0;
+        // all: unset (기본 스타일 초기화, 정렬까지 초기화시켜버려서 안 함)
+        width: 128px;
+        height: 33px;
+        background-color: $yellow;
+        border-radius: 10px;
+        position: relative;
+        left: calc(100% - 128px);
+        font-family: $sansSerif;
+        font-size: 14px;
       }
     }
   }

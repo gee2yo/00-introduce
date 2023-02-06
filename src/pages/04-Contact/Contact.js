@@ -1,5 +1,6 @@
 import React from "react";
 import InputWithLabel from "../../components/molecule/InputWithLabel";
+import TextAreaWithLabel from "../../components/molecule/TextAreaWithLabel";
 // import Line from "./atom/Line";
 import Title from "../../components/molecule/Title";
 import "./Contact.scss";
@@ -42,14 +43,21 @@ export default function Contact() {
                 width="300"
                 height="50"
               />
-              <InputWithLabel
+              <TextAreaWithLabel
+                label="Message"
+                txtAreaId="message"
+                width="300"
+                height="104"
+                placeholder="Write your message"
+              />
+              {/* <InputWithLabel
                 label="Message"
                 inputId="message"
                 name="message"
                 placeholder="Write your message here"
                 width="300"
-                height="50"
-              />
+                height="104"
+              /> */}
               <button type="submit">Send Message</button>
             </form>
           </div>
