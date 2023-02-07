@@ -5,7 +5,7 @@
   height: 420px;
   border-radius: 20px;
   margin-right: 75.09px;
-  background: #c4c4c4 url(#{$url-images}profile.jpg);
+  @content;
 }
 
 .about {
@@ -16,18 +16,30 @@
   justify-content: center;
   align-items: center;
 
-  &-contents {
+  .about-contents {
     display: flex;
 
     &-photo {
-      @include photo;
-
-      &-back {
-        @include photo;
-        background-color: #c4c4c4;
-        transform: rotate(-7.17deg);
-        opacity: 25%;
+      @include photo {
+        position: relative;
+        overflow: hidden;
       }
+
+      img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+    &-back {
+        @include photo {
+          position: absolute;
+          background-color: #c4c4c4;
+          transform: rotate(-7.17deg);
+          opacity: 25%;
+        }
     }
 
     &-texts {

@@ -30,24 +30,27 @@ export default function Contact() {
               className="gform"
               method="POST"
               action="https://script.google.com/macros/s/AKfycbyU7NmPoihmmZFeWxlK4AnXvdQvH70jRP7qZeV_HQ8jFIXbtaLgrU4neJoSwflaMqLJZg/exec"
+              target="responseTo"
+              autoComplete="off"
             >
               <InputWithLabel
+                name="name"
                 label="Name"
                 inputId="name"
-                name="name"
                 placeholder="Write your name here"
                 width="300"
                 height="50"
               />
               <InputWithLabel
+                name="email"
                 label="Email"
                 inputId="email"
-                name="email"
                 placeholder="Write your email here"
                 width="300"
                 height="50"
               />
               <TextAreaWithLabel
+                name="message"
                 label="Message"
                 txtAreaId="message"
                 width="300"
@@ -55,11 +58,7 @@ export default function Contact() {
                 placeholder="Write your message"
               />
               <button type="submit">Send Message</button>
-              <div className="thankyou">
-                <h2>
-                  <em>Thnaks</em>for contacting me! I will get back to you soon!
-                </h2>
-              </div>
+              <iframe name="responseTo" title="responseTo" />
             </form>
           </div>
         </div>

@@ -18,7 +18,16 @@
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      background: url($url-images+"profile.jpg") no-repeat;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: contain;
+      }
     }
 
     &-text {

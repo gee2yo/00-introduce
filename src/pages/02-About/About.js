@@ -7,8 +7,12 @@ export default function About() {
     <div className="about">
       <div className="about-contents">
         <div className="about-contents-photo">
-          <div className="about-contents-photo-back" />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
+            alt="profile"
+          />
         </div>
+        <div className="about-contents-back" />
         <div className="about-contents-texts">
           <div className="about-contents-texts-about">
             <Title title="ABOUT" align="left" />
@@ -34,8 +38,8 @@ export default function About() {
               <li>mySQL</li>
               <li>GIT/Github</li>
               {/* <li>Photoshop</li>
-              <li>Preimeire</li>
-              <li>AfterEffetcs</li> */}
+                <li>Preimeire</li>
+                <li>AfterEffetcs</li> */}
             </ul>
           </div>
         </div>

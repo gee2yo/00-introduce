@@ -32,6 +32,8 @@ const StyledTextArea = styled.textarea`
   padding: 16px;
   background-color: rgb(255, 255, 255, 0.25);
   resize: none;
+  font-size: 16px;
+  font-family: ${(props) => props.theme.sansSerif};
 
   &:focus {
     outline: 2px solid ${(props) => props.theme.yellow};

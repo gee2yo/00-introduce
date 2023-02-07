@@ -6,7 +6,12 @@ export default function Home() {
     <div className="home">
       <div className="home-wrap">
         <div className="home-profile">
-          <div className="home-profile-photo" />
+          <div className="home-profile-photo">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
+              alt="profile"
+            />
+          </div>
           <div className="home-profile-text">
             <h1>CHOI JIEE</h1>
             <p>I am a Frontend Developer</p>
