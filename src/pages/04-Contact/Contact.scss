@@ -1,33 +1,40 @@
 @import "../../styles/_variables.scss";
 
 .contact {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
   width: 100vw;
   height: 100vh;
   background-color: $grey;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
+
+  &-wrap {
+    max-width: 1840px;
+    padding: 0 200px;
+    margin: 0 auto;
+  }
 
   .contact-contents {
-    display: flex;
+    width: 100%;
+    display: flex; // 나란히 나열
     justify-content: space-between;
-    margin-top: 44px;
+    margin-top: 64.97px;
 
     &-texts {
-      margin-right: 122px;
+      width: 713px;
+      margin-right: 126.79px;
+
       span {
         font-family: $cursive;
-        font-size: 36px;
-        line-height: 52.45px;
+        font-size: 56.6px;
+        line-height: 1.5;
         color: $yellow;
       }
       p {
-        margin-top: 22px;
-        width: 297px;
         font-family: $sansSerif;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 25.16px;
+        line-height: 1.5;
+        margin-top: 22px;
         color: #fff;
       }
     }
@@ -37,26 +44,27 @@
         display: flex;
         flex-direction: column;
 
-        .inputWithLabel,  .textAreaWithLabel {
+        .inputWithLabel,
+        .textAreaWithLabel {
           margin-bottom: 36px;
         }
       }
 
       button {
+        position: relative;
+        left: calc(100% - 256.32px);
+        font-family: $sansSerif;
+        font-size: 25.16px;
         border: 0;
         outline: 0;
         // all: unset (기본 스타일 초기화, 정렬까지 초기화시켜버려서 안 함)
-        width: 128px;
-        height: 33px;
+        width: 256.32px;
+        height: 66.08px;
         background-color: $yellow;
         border-radius: 10px;
-        position: relative;
-        left: calc(100% - 128px);
-        font-family: $sansSerif;
-        font-size: 14px;
         cursor: pointer;
       }
-      
+
       iframe {
         display: none;
       }

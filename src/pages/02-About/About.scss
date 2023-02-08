@@ -1,20 +1,25 @@
 @import "../../styles/_variables.scss";
 
 @mixin photo {
-  width: 330px;
-  height: 420px;
+  width: 518.83px;
+  height: 660.33px;
   border-radius: 20px;
-  margin-right: 75.09px;
+  margin-right: 92.01px;
   @content;
 }
 
 .about {
+  display: flex;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background-color: $grey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  &-wrap {
+    max-width: 1840px;
+    padding: 0 200px;
+    margin: 0 auto;
+  }
 
   .about-contents {
     display: flex;
@@ -53,16 +58,16 @@
         }
         span {
           font-family: $cursive;
-          font-size: 36px;
-          line-height: 52.45px;
+          font-size: 56.6px;
+          line-height: 1.5;
           color: $yellow;
         }
         p {
-          margin-top: 25px;
-          margin-bottom: 40px;
           font-family: $sansSerif;
-          font-size: 16px;
+          font-size: 25.16px;
           line-height: 1.5;
+          margin-top: 38.69px;
+          margin-bottom: 59px;
           color: #fff;
         }
       }
@@ -74,9 +79,12 @@
         &-lists {
           margin-top: 14px;
           display: flex;
+          gap: 17.03px 0px;
           flex-wrap: wrap;
 
           li {
+            font-family: $sansSerif;
+            font-size: 25.16px;
             width: 30%;
             padding-left: 5px;
             vertical-align: middle;

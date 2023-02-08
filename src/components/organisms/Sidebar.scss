@@ -3,38 +3,36 @@
 .sidebar {
   position: fixed;
   top: 50%;
-  left: 5%;
+  left: 93px;
 
   &-wrap {
     display: flex;
-    gap: 25px;
     justify-content: center;
     transform: translateX(-50%) rotate(-90deg);
   }
 
   &-sns {
-    width: 253px;
-    height: 25px;
     display: flex;
-    gap: 32px; 
-
+    
     div {
-      width: 25px;
-      height: 25px;
+      width: 39.31px;
+      height: 39.31px;
       border-radius: 50%;
       background-color: #414141;
+      margin-right: 50.32px; 
     }
   }
 
   &-scroll {
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-right: 25px;
+    gap: 39.71px;
+    margin-right: 39.55px;
 
     span {
       font-family: $sansSerif;
-      font-size: 12px;
+      font-size: 18.87px;
+      line-height: 1.5;
       color: #fff;
       letter-spacing: 0.2em;
       white-space: nowrap;

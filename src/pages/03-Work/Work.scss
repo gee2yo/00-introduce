@@ -1,16 +1,16 @@
 @import "../../styles/_variables.scss";
 
 .work {
+  display: flex;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background-color: $black;
-  display: flex;
-  align-items: center;
 
   .work-wrap {
-    max-width: 1725px; // 1440 넘으면 작아짐 & 1440보다 모자라면 커짐
+    max-width: 1840px;
+    padding: 0 200px;
     margin: 0 auto;
-    padding: 0 142.5px;
   }
 
   .work-contents {
@@ -24,32 +24,32 @@
         display: flex;
 
         li {
-          display: flex;
+          display: flex; // 아래 선 정렬
           flex-direction: column;
           align-items: center;
           font-family: $sansSerif;
-          font-size: 16px;
+          font-size: 25.16px;
           line-height: 1.5;
           color: #fff;
 
         }
         li:not(:last-of-type) {
-          margin-right: 47px;
+          margin-right: 73.89px;
         }
       }
     }
 
     &-lists {
-      margin-top: 50px;
+      margin-top: 69.3px;
 
       ul {
         display: flex;
         flex-wrap: wrap;
-        gap: 39px;
+        gap: 61px;
 
         li {
-          width: 700.5px; // 438px
-          height: 526.13px;
+          width: 689px; 
+          height: 517px;
           background: #C4C4C4 url($url-images+"mac2.png") no-repeat center;
           background-size: contain;
           border-radius: 20px;         
@@ -58,19 +58,19 @@
     }
 
     &-slide {
-      margin-top: 50px;
       display: flex;
       justify-content: center;
+      margin-top: 78.75px;
 
       &-circles {
-        width: 10px;
-        height: 10px;
+        width: 15.72px;
+        height: 15.72px;
         background-color: #fff;
         opacity: 25%;
         border-radius: 50%;
 
         &:not(:last-of-type) {
-          margin-right: 15px;
+          margin-right: 23.58px;
         }
       }
 

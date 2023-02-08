@@ -28,7 +28,7 @@ Line.propTypes = {
 };
 
 Line.defaultProps = {
-  width: "70px",
-  height: "3px",
+  width: "110.06px",
+  height: "4.72px",
   bgColor: "#fff",
 };

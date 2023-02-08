@@ -18,29 +18,30 @@ const StyledTextAreaWithLabel = styled.div`
 
   label {
     font-family: ${(props) => props.theme.sansSerif};
-    font-size: 16px;
+    font-size: 25.16px;
     color: #fff;
-    line-height: 24px;
-    margin-bottom: 7px;
+    line-height: 1.5;
+    margin-bottom: 13.68px;
   }
 `;
 
 const StyledTextArea = styled.textarea`
+  font-family: ${(props) => props.theme.sansSerif};
+  font-size: 25.16px;
+  line-height: 1.5;
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
+  padding: 32.04px;
   border-radius: 10px;
-  padding: 16px;
   background-color: rgb(255, 255, 255, 0.25);
   resize: none;
-  font-size: 16px;
-  font-family: ${(props) => props.theme.sansSerif};
 
   &:focus {
-    outline: 2px solid ${(props) => props.theme.yellow};
+    outline: 5px solid ${(props) => props.theme.yellow};
   }
   &::placeholder {
     font-family: ${(props) => props.theme.sansSerif};
-    font-size: 16px;
+    font-size: 25.16px;
   }
 `;
 

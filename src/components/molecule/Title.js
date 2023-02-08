@@ -23,7 +23,7 @@ export default function Title({
 const StyledH1 = styled.h1`
   font-size: ${(props) => props.fontSize};
   font-family: $sansSerif;
-  line-height: 36px;
+  line-height: 1.5;
   color: #fff;
   display: inline-block;
   margin-right: 29px;
@@ -40,8 +40,8 @@ Title.propTypes = {
 
 Title.defaultProps = {
   align: "center",
-  width: "70px",
-  height: "3px",
+  width: "110.06px",
+  height: "4.72px",
   bgColor: "#fff",
-  fontSize: "24px",
+  fontSize: "37.73px",
 };

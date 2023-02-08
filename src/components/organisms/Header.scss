@@ -1,20 +1,23 @@
+@import "../../styles/variables";
+
 .header {
-  width: 100vw;
-  height: 69px;
   position: fixed;
+  width: 100vw;
 
   &-wrap {
     position: absolute;
-    right: 65px;
+    right: 102.26px;
+    padding-left: 102.26px;
   }
 
   &-lists {
-    display: flex;
-    margin-top: 33px;
+    display: flex; // 나란히 정렬
+    margin-top: 51.88px;
 
     &-item {
       margin-right: 54px;
-      font-size: 1rem;
+      font-family: $sansSerif;
+      font-size: 25.16px;
       line-height: 1.5;
       color: #fff;
 

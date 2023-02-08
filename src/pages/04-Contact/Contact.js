@@ -9,13 +9,7 @@ export default function Contact() {
   return (
     <div className="contact">
       <div className="contact-wrap">
-        <Title
-          title="CONTACT"
-          align="center"
-          width="100px"
-          height="3px"
-          bgColor="#fff"
-        />
+        <Title title="CONTACT" align="center" bgColor="#fff" />
         <div className="contact-contents">
           <div className="contact-contents-texts">
             <span>{`LET'S TALK`}</span>
@@ -38,23 +32,23 @@ export default function Contact() {
                 label="Name"
                 inputId="name"
                 placeholder="Write your name here"
-                width="300"
-                height="50"
+                width="600.75"
+                height="100.13"
               />
               <InputWithLabel
                 name="email"
                 label="Email"
                 inputId="email"
                 placeholder="Write your email here"
-                width="300"
-                height="50"
+                width="600.75"
+                height="100.13"
               />
               <TextAreaWithLabel
                 name="message"
                 label="Message"
                 txtAreaId="message"
-                width="300"
-                height="104"
+                width="600.75"
+                height="208.26"
                 placeholder="Write your message"
               />
               <button type="submit">Send Message</button>

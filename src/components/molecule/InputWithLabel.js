@@ -13,7 +13,7 @@ export default function InputWithLabel({
   ...rest
 }) {
   return (
-    <div className="inputWithLabel">
+    <StyledInputWithLabel className="inputWithLabel">
       <label htmlFor={inputId}>{label}</label>
       <StyledInput
         type="text"
@@ -23,22 +23,39 @@ export default function InputWithLabel({
         {...rest}
         required
       />
-    </div>
+    </StyledInputWithLabel>
   );
 }
 
+const StyledInputWithLabel = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-family: ${(props) => props.theme.sansSerif};
+    font-size: 25.16px;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 13.68px;
+  }
+`;
+
 const StyledInput = styled.input`
+  font-family: ${(props) => props.theme.sansSerif};
+  font-size: 25.16px;
+  line-height: 1.5;
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
-  font-family: ${(props) => props.theme.sansSerif};
-  font-size: 16px;
+  padding: 32.04px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255, 0.25);
 
   &:focus {
-    outline: 2px solid ${(props) => props.theme.yellow};
+    outline: 5px solid ${(props) => props.theme.yellow};
   }
   &::placeholder {
     font-family: ${(props) => props.theme.sansSerif};
-    font-size: 16px;
+    font-size: 25.16px;
   }
 `;
 
