@@ -9,3 +9,15 @@ $sansSerif: "Poppins", sans-serif;
 
 $url-images: "../../../public/images/";
 // url($url-images+"bg.jpg")
+
+// 반응형
+@mixin tablet {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
