@@ -9,7 +9,7 @@
   align-items: center;
 
   .work-wrap {
-    max-width: 916px;  
+    max-width: 1440px; // 1440 넘으면 작아짐 & 1440보다 모자라면 커짐
   }
 
   .work-contents {
@@ -46,8 +46,8 @@
         gap: 39px;
 
         li {
-          width: 439px;
-          height: 329px;
+          width: 30.5vw;
+          height: calc(30.5vw * 0.75);
           background: #C4C4C4 url($url-images+"mac2.png") no-repeat center;
           background-size: contain;
           border-radius: 20px;
