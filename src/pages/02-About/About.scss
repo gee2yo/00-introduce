@@ -1,8 +1,8 @@
 @import "../../styles/_variables.scss";
 
 @mixin photo {
-  width: 330px;
-  height: 420px;
+  width: 346.5px;
+  height: 441px;
   border-radius: 20px;
   margin-right: 75.09px;
   @content;
@@ -16,36 +16,56 @@
   justify-content: center;
   align-items: center;
 
-  .about-contents {
-    display: flex;
+  &-wrap {
+    display: flex; // left, right 배열
+    max-width: 960px;
+    margin: 0 auto;
 
-    &-photo {
-      @include photo {
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
+    // 1. left
+    &-left {
+      width: 398.8px;
+      position: relative;
+
+      @mixin photo {
+        width: 346.5px;
+        height: 441px;
+        border-radius: 20px;
+        @content;
       }
 
-      img {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-      }
-    }
-    &-back {
+      &-photo {
         @include photo {
-          position: absolute;
-          background-color: #c4c4c4;
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+        }
+
+        &-img {
+          position: absolute; // 프레임 안에 들어가게
+          top: 0;
+          left: 0;
+          width: 100%; // 프레임과 같은 크기
+          object-fit: cover;
+        }
+      }
+
+      &-shadow {
+        @include photo {
+          position: absolute; // 이미지 아래에 겹치게
+          top: 0;
+          left: 0;
           transform: rotate(-7.17deg);
+          background-color: #c4c4c4;
           opacity: 25%;
         }
+      }
     }
 
-    &-texts {
-      width: 37.5vw;
+    // 2. right
+    &-right {
+      width: calc(100% - 346.5px - 61.45px);
 
+      // 2-1. about
       &-about {
         h1 {
           font-family: $sansSerif;
@@ -67,6 +87,7 @@
         }
       }
 
+      // 2-2. skills
       &-skills {
         font-family: $sansSerif;
         color: #fff;

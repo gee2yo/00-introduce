@@ -5,16 +5,22 @@ import "./About.scss";
 export default function About() {
   return (
     <div className="about">
-      <div className="about-contents">
-        <div className="about-contents-photo">
-          <img
-            src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
-            alt="profile"
-          />
+      <div className="about-wrap">
+        {/* 1. left */}
+        <div className="about-wrap-left">
+          <div className="about-wrap-left-photo">
+            <img
+              className="about-wrap-left-photo-img"
+              src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
+              alt="profile"
+            />
+          </div>
+          <div className="about-wrap-left-shadow" />
         </div>
-        <div className="about-contents-back" />
-        <div className="about-contents-texts">
-          <div className="about-contents-texts-about">
+        {/* 2. right */}
+        <div className="about-wrap-right">
+          {/* 2-1. about */}
+          <div className="about-wrap-right-about">
             <Title title="ABOUT" align="left" />
             <span>CHOI JIEE</span>
             <p>
@@ -23,7 +29,8 @@ export default function About() {
               nunc lacus.{" "}
             </p>
           </div>
-          <div className="about-contents-texts-skills">
+          {/* 2-2. skills */}
+          <div className="about-wrap-right-skills">
             <Title title="SKILLS" align="left" />
             <ul className="about-contents-texts-skills-lists">
               <li>HTML</li>

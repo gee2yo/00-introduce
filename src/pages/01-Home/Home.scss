@@ -5,22 +5,23 @@
   height: 100vh;
   background-color: #020202;
   display: flex;
-  justify-content: center;
   align-items: center;
 
-  &-profile {
+  &-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 960px;
+    margin: 0 auto;
 
-    &-photo { 
+    // photo
+    &-photo {
+      position: relative; // img를 원 안에 넣기 위함
       width: 393px;
       height: 393px;
       border-radius: 50%;
-      position: relative;
       overflow: hidden;
-      // 17.4vw 250px
 
       img {
         position: absolute;
@@ -31,18 +32,16 @@
       }
     }
 
+    // text
     &-text {
       margin-top: 24px;
       text-align: center;
 
       h1 {
-        font-size: 56.6px;
-        line-height: 52.45px;
-        font-family: "Permanent Marker";
-        color: $yellow;
+        @include cursive;
       }
       p {
-        font-size: 37.73px; // 24px
+        font-size: 37.73px; 
         line-height: 36px;
         font-family: "Poppins";
         color: #fff;

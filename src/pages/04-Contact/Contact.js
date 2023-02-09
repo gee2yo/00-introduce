@@ -12,9 +12,10 @@ export default function Contact() {
         <Title
           title="CONTACT"
           align="center"
-          width="100px"
-          height="3px"
-          bgColor="#fff"
+          fontColor="#fff"
+          lineWidth="100px"
+          lineHeight="3px"
+          lineColor="#fff"
         />
         <div className="contact-contents">
           <div className="contact-contents-texts">

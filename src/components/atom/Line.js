@@ -2,33 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-export default function Line({ width, height, bgColor }) {
+export default function Line({ lineWidth, lineHeight, lineColor }) {
   return (
-    <div>
-      <StyledLine
-        className="line"
-        width={width}
-        height={height}
-        bgColor={bgColor}
-      />
-    </div>
+    <StyledLine
+      className="line"
+      lineWidth={lineWidth}
+      lineHeight={lineHeight}
+      lineColor={lineColor}
+    />
   );
 }
 
 const StyledLine = styled.div`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  background-color: ${(props) => props.bgColor};
+  width: ${(props) => props.lineWidth};
+  height: ${(props) => props.lineHeight};
+  background-color: ${(props) => props.lineColor};
 `;
 
 Line.propTypes = {
-  width: PropTypes.string,
-  height: PropTypes.string,
-  bgColor: PropTypes.string,
+  lineWidth: PropTypes.string,
+  lineHeight: PropTypes.string,
+  lineColor: PropTypes.string,
 };
 
 Line.defaultProps = {
-  width: "70px",
-  height: "3px",
-  bgColor: "#fff",
+  lineWidth: "70px",
+  lineHeight: "3px",
+  lineColor: "#fff",
 };

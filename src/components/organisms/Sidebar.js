@@ -6,16 +6,16 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar-wrap">
-        <div className="sidebar-scroll">
+        <div className="sidebar-wrap-scroll">
           <span>SCROLL DOWN</span>
           <Line height="1px" />
         </div>
-        <div className="sidebar-sns">
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
+        <div className="sidebar-wrap-sns">
+          <div className="sidebar-wrap-sns-item" />
+          <div className="sidebar-wrap-sns-item" />
+          <div className="sidebar-wrap-sns-item" />
+          <div className="sidebar-wrap-sns-item" />
+          <div className="sidebar-wrap-sns-item" />
         </div>
       </div>
     </div>

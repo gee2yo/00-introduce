@@ -3,41 +3,42 @@
 .sidebar {
   position: fixed;
   top: 50%;
-  left: 5%;
+  left: 60px;
 
   &-wrap {
     display: flex;
     gap: 25px;
     justify-content: center;
     transform: translateX(-50%) rotate(-90deg);
-  }
 
-  &-sns {
-    width: 253px;
-    height: 25px;
-    display: flex;
-    gap: 32px; 
-
-    div {
-      width: 25px;
+    // sns
+    &-sns {
+      width: 253px;
       height: 25px;
-      border-radius: 50%;
-      background-color: #414141;
+      display: flex;
+      gap: 32px;
+
+      &-item {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #414141;
+      }
     }
-  }
 
-  &-scroll {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-right: 25px;
+    // scroll
+    &-scroll {
+      display: flex;
+      align-items: center;
+      gap: 25px;
 
-    span {
-      font-family: $sansSerif;
-      font-size: 12px;
-      color: #fff;
-      letter-spacing: 0.2em;
-      white-space: nowrap;
+      span {
+        font-family: $sansSerif;
+        font-size: 12px;
+        color: #fff;
+        letter-spacing: 0.2em;
+        white-space: nowrap;
+      }
     }
   }
 }

@@ -7,6 +7,15 @@ $grey: #252525;
 $cursive: "Permanent Marker", cursive;
 $sansSerif: "Poppins", sans-serif;
 
+// fonts
+@mixin cursive {
+  font-family: $cursive;
+  font-size: 37.81px;
+  line-height: 1.5;
+  color: $yellow;
+  @content;
+}
+
 $url-images: "../../../public/images/";
 // url($url-images+"bg.jpg")
 
