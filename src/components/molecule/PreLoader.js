@@ -11,7 +11,7 @@ export default function PreLoader() {
       setIsMount(true);
     }, 300);
     return () => setIsMount(false);
-  }, []);
+  }, []); // [] 안 하면 1번 실행 후 다시 처음 상태로(100) 돌아옴
 
   return (
     <StyledPreLoader isMount={isMount}>
@@ -26,7 +26,7 @@ const preLoaderSlide = keyframes`
     transform: scaleY(0)
   }
   to {
-    transform: scaleY(1)
+    transform: scale(1);
   }
 `;
 
@@ -36,25 +36,23 @@ const StyledPreLoader = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #111;
+  background-color: #111; // 연회색
   z-index: 111111;
   transform-origin: bottom;
-  animation: ${(props) =>
+  ${(props) =>
     props.isMount &&
     css`
-      ${preLoaderSlide} 0.5s ease-in-out 0s 1 reverse both;
-    `};
-  // 1(꽉 찬 상태) -> 0(아래로 사라지게) = 없는 상태로 유지
+      animation: ${preLoaderSlide} 0.5s ease-in-out 0s 1 reverse both;
+      // 실행 전: to(100) -> 실행 후: from(0)
+      // 위 -> 아래로 1번 작아진다
+    `}
+  // 
 
   .preLoader-point {
-    position: absolute;
+    position: absolute; // div 끝 따라다님
     top: 0;
     width: 100vw;
     height: 3px;
-    right: 0;
-    left: 0;
-    margin: auto;
-    border-radius: 2px;
     background-color: #ffc41f;
   }
 
@@ -63,10 +61,7 @@ const StyledPreLoader = styled.div`
     background-color: #222;
     transform-origin: top;
     animation: ${preLoaderSlide} 0.5s ease-in-out 0s 1 normal both;
-    // 0(없는 상태) -> 1(아래로 꽉 차게) = 꽉 찬 상태로 유지
+    // 실행 전: from(0) -> 실행 후: to(100)
+    // 위 -> 아래로 1번 커진다
   }
 `;
-
-// PreLoader.propTypes = {
-//   isMount: PropTypes.boolean.isRequired,
-// }

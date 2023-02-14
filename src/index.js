@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
@@ -12,6 +12,8 @@ import About from "./pages/02-About/About";
 import Work from "./pages/03-Work/Work";
 import Contact from "./pages/04-Contact/Contact";
 import theme from "./styles/theme";
+
+const LineContext = createContext();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -47,7 +49,9 @@ const router = createBrowserRouter([
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
+      <LineContext.Provider value="">
+        <RouterProvider router={router} />
+      </LineContext.Provider>
     </ThemeProvider>
   </React.StrictMode>
 );

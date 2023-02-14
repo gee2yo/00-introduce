@@ -21,7 +21,7 @@ export default function About() {
         <div className="about-wrap-right">
           {/* 2-1. about */}
           <div className="about-wrap-right-about">
-            <Title title="ABOUT" align="left" />
+            <Title fontSize="50px" title="ABOUT" align="left" />
             <span>CHOI JIEE</span>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim

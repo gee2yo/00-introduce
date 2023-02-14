@@ -35,20 +35,27 @@ export default function Contact() {
               autoComplete="off"
             >
               <InputWithLabel
-                name="name"
                 label="Name"
-                inputId="name"
-                placeholder="Write your name here"
-                width="300"
-                height="50"
+                width="300px"
+                height="50px"
+                input={{
+                  // 객체에 prop 담아 전달 (key-value 쌍)
+                  id: "name",
+                  placeholder: "Write your name here",
+                  type: "text",
+                  name: "name",
+                }}
               />
               <InputWithLabel
-                name="email"
                 label="Email"
-                inputId="email"
-                placeholder="Write your email here"
-                width="300"
-                height="50"
+                width="300px"
+                height="50px"
+                input={{
+                  id: "email",
+                  placeholder: "Write your email here",
+                  type: "text",
+                  name: "email",
+                }}
               />
               <TextAreaWithLabel
                 name="message"

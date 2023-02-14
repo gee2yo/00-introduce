@@ -17,6 +17,7 @@ function Main() {
     <>
       <GlobalStyle />
       <PreLoader />
+      {/* 얘가 밑에 있으면 제일 위로 가서 다른 것들이 클릭이 안 됨 */}
       <Header />
       <Sidebar />
       <Outlet />
